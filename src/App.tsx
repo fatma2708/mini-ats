@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { AppLayout } from "@/components/AppLayout";
-import { RequireAuth } from "@/components/RequireAuth";
+import { AppLayout } from "@/components/layout/AppLayout";
+import { RequireAuth } from "@/components/layout/RequireAuth";
 import { LandingPage } from "@/pages/LandingPage";
 import { LoginPage } from "@/pages/LoginPage";
 import { BoardPage } from "@/pages/BoardPage";

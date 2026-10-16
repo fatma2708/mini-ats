@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Dot } from "@/components/ui/badge";
-import { Field } from "@/components/common";
+import { Field } from "@/components/shared/form";
 import { createJob, updateJob } from "@/lib/api";
 import { useInvalidateData } from "@/hooks/queries";
 import { cn, emptyToNull, errorMessage } from "@/lib/utils";

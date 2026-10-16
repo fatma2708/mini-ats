@@ -9,8 +9,9 @@ import { updateJob } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Badge, Dot } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { EmptyState, Eyebrow, PageHeader } from "@/components/common";
-import { JobFormDialog } from "@/components/JobFormDialog";
+import { Eyebrow, PageHeader } from "@/components/shared/PageHeader";
+import { EmptyState } from "@/components/shared/EmptyState";
+import { JobFormDialog } from "@/components/jobs/JobFormDialog";
 import { cn, errorMessage, formatDate } from "@/lib/utils";
 import { STAGES, type Job, type JobStatus, type Stage } from "@/types";
 

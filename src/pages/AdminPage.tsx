@@ -11,7 +11,10 @@ import { Input } from "@/components/ui/input";
 import { Badge, Dot } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Avatar, EmptyState, Eyebrow, Field, PageHeader } from "@/components/common";
+import { Avatar } from "@/components/shared/badges";
+import { Eyebrow, PageHeader } from "@/components/shared/PageHeader";
+import { EmptyState } from "@/components/shared/EmptyState";
+import { Field } from "@/components/shared/form";
 import { cn, errorMessage, formatDate } from "@/lib/utils";
 import type { Role } from "@/types";
 

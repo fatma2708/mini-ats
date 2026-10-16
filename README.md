@@ -28,21 +28,35 @@ A small multi-tenant **Applicant Tracking System**. Customers manage their jobs 
 ## Project structure
 
 ```
+docs/design/                 Stitch HTML mockups the UI is based on (reference only, not built)
+public/                      static assets (favicon)
 supabase/
-  schema.sql                 tables, RLS policies, triggers, storage bucket
+  schema.sql                 full schema for a new project: tables, RLS, triggers, storage bucket
+  migrations/                changes to run on a database created with an older schema.sql
   functions/create-user/     admin-only account creation (uses the service role key server-side)
   functions/assess-cv/       AI assessment of a candidate's CV against the job
 src/
   main.tsx                   providers (React Query, Router, Auth, toasts)
   App.tsx                    routes
+  index.css                  design tokens (Tailwind v4 @theme) and type scale
   types.ts                   TypeScript types matching schema.sql (+ typed Database for supabase-js)
-  lib/supabase.ts            Supabase client (anon key only)
-  lib/api.ts                 all data access: queries, mutations, storage, edge function calls
-  lib/pdf.ts                 PDF text extraction with pdf.js
+  lib/
+    supabase.ts              Supabase client (anon key only)
+    api.ts                   all data access: queries, mutations, storage, edge function calls
+    pdf.ts                   PDF text extraction with pdf.js
+    utils.ts                 small helpers (class names, dates, URL normalization)
   context/AuthContext.tsx    session, profile, role, "Viewing as" customer
-  hooks/queries.ts           React Query hooks (jobs, candidates, optimistic stage move)
-  components/                layout, dialogs, candidate drawer, shadcn/ui primitives in ui/
-  pages/                     Login, Board, Jobs, Admin
+  hooks/
+    queries.ts               React Query hooks (jobs, candidates, optimistic stage move)
+    useJobLabel.ts           job label with the company name in the admin "all customers" view
+  pages/                     one file per route: Landing, Login, Board, Jobs, Admin
+  components/
+    ui/                      design-system primitives (shadcn/ui style): button, input, dialog…
+    shared/                  app-wide building blocks: logo, badges, page header, empty state, form fields
+    layout/                  app shell (sidebar, top bar, "Viewing as" banner) and route guard
+    board/                   Kanban column, candidate card, empty pipeline
+    candidates/              Add candidate dialog, candidate drawer
+    jobs/                    New / edit job dialog
 ```
 
 ## Setup

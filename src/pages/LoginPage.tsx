@@ -5,7 +5,8 @@ import { toast } from "sonner";
 import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Field, Logo, WithIcon } from "@/components/common";
+import { Logo } from "@/components/shared/brand";
+import { Field, WithIcon } from "@/components/shared/form";
 import { errorMessage } from "@/lib/utils";
 
 export function LoginPage() {

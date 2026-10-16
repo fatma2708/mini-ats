@@ -5,7 +5,8 @@ import { useAuth } from "@/context/AuthContext";
 import { useProfiles } from "@/hooks/queries";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectLabel, SelectSeparator, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Avatar, Logo } from "@/components/common";
+import { Logo } from "@/components/shared/brand";
+import { Avatar } from "@/components/shared/badges";
 import { cn } from "@/lib/utils";
 
 const ALL = "__all__";

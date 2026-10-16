@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* The Stitch mockups are reference material, not app sources: don't generate their classes. */
-@source not "../design";
+@source not "../docs";
 
 /*
  * Design tokens extracted from the Stitch designs in design/*.html.

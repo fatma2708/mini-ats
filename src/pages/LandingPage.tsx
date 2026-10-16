@@ -15,7 +15,9 @@ import {
 import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Dot } from "@/components/ui/badge";
-import { Eyebrow, Logo, STAGE_DOT } from "@/components/common";
+import { Logo } from "@/components/shared/brand";
+import { STAGE_DOT } from "@/components/shared/badges";
+import { Eyebrow } from "@/components/shared/PageHeader";
 import { cn } from "@/lib/utils";
 import { STAGES, STAGE_LABELS } from "@/types";
 
