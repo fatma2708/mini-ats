@@ -24,7 +24,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge, Dot } from "@/components/ui/badge";
-import { Select, SelectContent, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { LinkedInIcon } from "@/components/shared/brand";
 import { RecommendationBadge, STAGE_DOT } from "@/components/shared/badges";
 import { Eyebrow } from "@/components/shared/PageHeader";
@@ -196,12 +196,18 @@ function CandidateDetails({ candidate, onDeleted }: { candidate: CandidateWithJo
               <ChevronDown className="size-4" aria-hidden="true" />
             </SelectPrimitive.Trigger>
             <SelectContent className="w-52">
-              <SelectLabel>Move candidate to</SelectLabel>
-              {STAGES.map((s) => (
-                <SelectItem key={s} value={s} className={s === "rejected" ? "text-error focus:bg-error-container" : undefined}>
-                  {STAGE_LABELS[s]}
-                </SelectItem>
-              ))}
+              <SelectGroup>
+                <SelectLabel>Move candidate to</SelectLabel>
+                {STAGES.map((s) => (
+                  <SelectItem
+                    key={s}
+                    value={s}
+                    className={s === "rejected" ? "text-error focus:bg-error-container" : undefined}
+                  >
+                    {STAGE_LABELS[s]}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
             </SelectContent>
           </Select>
           <DrawerClose />

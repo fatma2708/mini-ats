@@ -4,7 +4,16 @@ import { Briefcase, Building2, Columns3, Eye, LogOut, Menu, ShieldCheck, X } fro
 import { useAuth } from "@/context/AuthContext";
 import { useProfiles } from "@/hooks/queries";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectLabel, SelectSeparator, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Logo } from "@/components/shared/brand";
 import { Avatar } from "@/components/shared/badges";
 import { cn } from "@/lib/utils";
@@ -34,8 +43,10 @@ function ViewingAsSelect({ className }: { className?: string }) {
         </span>
       </SelectTrigger>
       <SelectContent>
-        <SelectLabel>Select customer</SelectLabel>
-        <SelectItem value={ALL}>All customers</SelectItem>
+        <SelectGroup>
+          <SelectLabel>Select customer</SelectLabel>
+          <SelectItem value={ALL}>All customers</SelectItem>
+        </SelectGroup>
         {customers.length > 0 && <SelectSeparator />}
         {customers.map((c) => (
           <SelectItem key={c.id} value={c.id}>

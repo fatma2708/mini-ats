@@ -6,6 +6,8 @@ import { fieldClasses } from "@/components/ui/input";
 
 const Select = SelectPrimitive.Root;
 const SelectValue = SelectPrimitive.Value;
+/** Required around SelectLabel: Radix throws if a label is rendered outside a group. */
+const SelectGroup = SelectPrimitive.Group;
 
 function SelectTrigger({
   className,
@@ -89,4 +91,4 @@ function SelectSeparator({ className, ...props }: React.ComponentProps<typeof Se
   return <SelectPrimitive.Separator className={cn("-mx-1.5 my-1 h-px bg-surface-variant", className)} {...props} />;
 }
 
-export { Select, SelectValue, SelectTrigger, SelectContent, SelectItem, SelectLabel, SelectSeparator };
+export { Select, SelectValue, SelectTrigger, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectSeparator };
