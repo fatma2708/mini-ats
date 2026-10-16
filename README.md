@@ -23,7 +23,7 @@ A small multi-tenant **Applicant Tracking System**. Customers manage their jobs 
 | Drag and drop | `@dnd-kit/core` |
 | PDF | `pdfjs-dist` (text extraction in the browser, lazy loaded) |
 | Backend | Supabase: Postgres + Row Level Security, Auth, Storage, Edge Functions (Deno) |
-| AI | Anthropic Claude, called only from the `assess-cv` edge function |
+| AI | Any OpenAI-compatible chat API (Groq by default), called only from the `assess-cv` edge function |
 
 ## Project structure
 
@@ -61,7 +61,7 @@ src/
 
 ## Setup
 
-Requirements: Node.js 20+, a Supabase project, the Supabase CLI (`npm i -g supabase`) and an Anthropic API key.
+Requirements: Node.js 20+, a Supabase project, the Supabase CLI (`npm i -g supabase`) and a Groq API key ([console.groq.com/keys](https://console.groq.com/keys)), or a key for another OpenAI-compatible provider (see [AI assessment](#ai-assessment)).
 
 ### 1. Database
 
@@ -76,8 +76,8 @@ Then in **Authentication**:
 ```bash
 supabase login
 supabase link --project-ref <your-project-ref>
-supabase secrets set ANTHROPIC_API_KEY=<your-key>
-# optional: supabase secrets set AI_MODEL=<model-id>   (default: claude-haiku-5-5)
+supabase secrets set GROQ_API_KEY=<your-key>
+# optional, see "AI assessment": AI_MODEL, AI_API_URL
 supabase functions deploy create-user
 supabase functions deploy assess-cv
 ```
@@ -114,13 +114,36 @@ There is no admin yet, so the first one is created from the Supabase dashboard:
 
 `vercel.json` rewrites every path to `index.html` so deep links like `/board?job=…` work on refresh. Any static host works the same way (Netlify, Cloudflare Pages) with an equivalent SPA rewrite.
 
+## AI assessment
+
+The "Assess with AI" button calls the `assess-cv` edge function. It reads the candidate with the caller's JWT (so RLS applies), sends the extracted CV text and the job description to the model, and stores the answer in `candidates.ai_score` and `candidates.ai_assessment`:
+
+```json
+{ "score": 0-100, "summary": "…", "strengths": ["…"], "gaps": ["…"], "recommendation": "advance | maybe | reject" }
+```
+
+**The provider is configurable.** The function makes a standard OpenAI-compatible `chat/completions` call (JSON mode, temperature 0.2), so any compatible provider works. It is set with edge function secrets:
+
+| Secret | Default | Purpose |
+| --- | --- | --- |
+| `GROQ_API_KEY` | (required) | API key, sent as `Authorization: Bearer …` |
+| `AI_MODEL` | `openai/gpt-oss-120b` | Model id. On Groq, `llama-3.3-70b-versatile` also works; see [console.groq.com/docs/models](https://console.groq.com/docs/models) |
+| `AI_API_URL` | `https://api.groq.com/openai/v1/chat/completions` | Endpoint, to use another OpenAI-compatible provider |
+
+```bash
+supabase secrets set AI_MODEL=llama-3.3-70b-versatile   # example: change the model
+supabase functions deploy assess-cv                     # redeploy after changing secrets
+```
+
+The chosen model must support `response_format: { "type": "json_object" }`. For `gpt-oss` models the function also sends `reasoning_effort: "low"` and allows more completion tokens, because their reasoning counts against that limit. If the call fails, the details are logged in **Supabase > Edge Functions > assess-cv > Logs** and the user sees "AI request failed".
+
 ## Security
 
 - **Tenant isolation is enforced by the database**, not by the UI. RLS policies on `jobs`, `candidates` and `storage.objects` only allow rows whose `customer_id` (or CV folder) is the logged-in user, unless `is_admin()` is true. The frontend filters by customer only for display ("Viewing as"); a customer cannot read another customer's data even with a crafted request.
 - `candidates.customer_id` is always copied from the job by a trigger, so a candidate cannot be attached to someone else's tenant.
 - A trigger prevents non-admins from changing their own `role`.
 - The **service role key never reaches the browser**: only the `create-user` edge function uses it, after checking that the caller is an admin with the caller's own JWT.
-- `assess-cv` runs with the caller's JWT, so RLS also applies to the AI feature. The Anthropic key is an edge function secret.
+- `assess-cv` runs with the caller's JWT, so RLS also applies to the AI feature. The AI provider key (`GROQ_API_KEY`) is an edge function secret and never reaches the browser.
 - CVs are in a **private** bucket and are opened through short-lived (10 min) signed URLs.
 - **Roles come from `app_metadata`.** `create-user` puts the role in `app_metadata`, and the `handle_new_user` trigger reads it from there. Only the service role key can write `app_metadata`. A user signing up through the public Auth API can set `user_metadata` but not their role, so they always get `customer`. If your database was created with an older `schema.sql` (role read from `user_metadata`), run `supabase/migrations/20261016000000_role_from_app_metadata.sql` and redeploy `create-user`.
 - **Keep public sign-ups disabled** anyway: accounts are meant to be created only by an admin, and an open sign-up would let anyone create a (customer) account.
