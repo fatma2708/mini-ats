@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&amp;family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","on-primary-container":"#c7c8ff","outline":"#767587","surface":"#fcf9f1","tertiary-fixed":"#e9ddff","primary-fixed":"#e1e0ff","on-tertiary-fixed":"#20133f","tertiary-fixed-dim":"#cfbef5","inverse-surface":"#31312b","on-tertiary-fixed-variant":"#4c3f6e","surface-tint":"#4448e0","on-primary-fixed":"#03006d","surface-container-low":"#f6f3eb","on-tertiary-container":"#d5c4fc","error":"#ba1a1a","on-surface-variant":"#454555","primary-fixed-dim":"#c0c1ff","on-error":"#ffffff","on-tertiary":"#ffffff","surface-container":"#f1eee6","inverse-primary":"#c0c1ff","inverse-on-surface":"#f3f1e9","primary-container":"#3b3fd8","tertiary-container":"#5d4f7f","on-secondary-container":"#426e48","on-secondary-fixed-variant":"#24502d","surface-bright":"#fcf9f1","tertiary":"#453866","on-surface":"#1c1c17","on-error-container":"#93000a","on-background":"#1c1c17","surface-container-high":"#ebe8e0","on-primary-fixed-variant":"#2829c8","primary":"#1e1dc2","on-primary":"#ffffff","secondary-container":"#bdefbf","background":"#fcf9f1","error-container":"#ffdad6","surface-container-highest":"#e5e2da","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#a2d2a5","surface-dim":"#dcdad2","on-secondary-fixed":"#002109","secondary-fixed":"#bdefbf","secondary":"#3c6842","outline-variant":"#c6c5d8","surface-variant":"#e5e2da"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","gutter":"1.5rem","space-md":"1.25rem","gutter-mobile":"1rem","space-sm":"0.75rem","space-xl":"3rem","space-xs":"0.375rem","space-lg":"2rem","margin":"2.5rem"},"fontFamily":{"headline-xl-mobile":["Plus Jakarta Sans"],"label-sm":["JetBrains Mono"],"body-md-bold":["Manrope"],"body-md":["Manrope"],"body-sm":["Manrope"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["JetBrains Mono"],"body-lg":["Manrope"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"600"}],"body-md-bold":["14px",{"lineHeight":"22px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><div class="w-9 h-9 rounded-DEFAULT bg-primary flex items-center justify-center shadow-[0_4px_12px_rgba(30,29,194,0.25)]"><span class="material-symbols-outlined text-on-primary text-[20px]">view_kanban</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Hireboard</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Talent Engine</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-md-bold shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.35),0_4px_12px_-2px_rgba(70,60,45,0.08)]"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pipeline-board" href="#"><span class="material-symbols-outlined text-[20px]">view_kanban</span><span class="font-body-md text-body-md">Pipeline / Board</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="jobs" href="#"><span class="material-symbols-outlined text-[20px]">work</span><span class="font-body-md text-body-md">Jobs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Admin / Settings</span></a></nav></div><div class="p-space-sm rounded-DEFAULT bg-surface-container flex items-center justify-between shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.85),0_1px_3px_0_rgba(70,60,45,0.03)]"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-body-md-bold text-body-md-bold text-on-surface truncate">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Lead Recruiter</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative flex items-center min-w-[220px]"><select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-md text-body-md py-space-xs pl-space-sm pr-space-lg rounded-DEFAULT shadow-[inset_0_2px_4px_rgba(70,60,45,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container"><option>Staff Backend Engineer</option><option>Senior Product Designer</option><option>Engineering Manager</option><option>All Active Roles</option></select><span class="material-symbols-outlined text-on-surface-variant text-[18px] absolute right-space-sm pointer-events-none">expand_more</span></div><div class="relative flex items-center flex-1"><span class="material-symbols-outlined text-on-surface-variant text-[18px] absolute left-space-sm pointer-events-none">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md py-space-xs pl-9 pr-space-sm rounded-DEFAULT shadow-[inset_0_2px_4px_rgba(70,60,45,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container placeholder:text-outline" placeholder="Search candidate, skill, or tag..." type="text"/></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-body-md-bold text-body-md-bold shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_4px_14px_rgba(59,63,216,0.25)] hover:bg-primary transition-all" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Add candidate</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full relative overflow-x-hidden min-h-[calc(100vh-4rem)]">
+<!-- ================= KANBAN BOARD UNDERLAY ================= -->
+<div class="w-full px-space-lg py-space-md flex flex-col gap-space-md opacity-85 select-none pointer-events-none transition-all duration-300">
+<!-- Top Action Bar for Pipeline -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1.5 rounded-full shadow-[inset_0_1px_2px_rgba(70,60,45,0.06)]">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Active Pipeline</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">24 TOTAL CANDIDATES</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-full shadow-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span class="font-body-sm text-body-sm">Filter: Product Design</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">STAGE FLOW: STANDARD DURATION 18 DAYS</span>
+</div>
+</div>
+<!-- Kanban Columns Track -->
+<div class="flex gap-space-md overflow-x-hidden pb-space-lg">
+<!-- Column: Applied -->
+<div class="w-72 shrink-0 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Applied</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">8</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(70,60,45,0.05),0_1px_3px_0_rgba(70,60,45,0.03)] flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Marcus Vance</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">open_in_new</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Design Systems Lead</span>
+<div class="flex items-center justify-between mt-2 pt-2 border-t-0">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">94 MATCH</span>
+<span class="font-label-sm text-label-sm text-outline">1d ago</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(70,60,45,0.05),0_1px_3px_0_rgba(70,60,45,0.03)] flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Priya Patel</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">open_in_new</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">UX Researcher</span>
+<div class="flex items-center justify-between mt-2 pt-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">76 MATCH</span>
+<span class="font-label-sm text-label-sm text-outline">2d ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Screening (ACTIVE) -->
+<div class="w-72 shrink-0 flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary">Screening</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">5</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">filter_list</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Active Card: Elena Rostova -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest ring-2 ring-primary-container shadow-[0_16px_32px_-4px_rgba(70,60,45,0.12),0_4px_12px_rgba(59,63,216,0.12)] flex flex-col gap-space-xs scale-[1.02]">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Elena Rostova</span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-body-sm text-body-sm text-primary font-body-md-bold">Sr. Product Designer</span>
+<div class="flex items-center justify-between mt-2 pt-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">82 MATCH</span>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-outline">Today</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(70,60,45,0.05),0_1px_3px_0_rgba(70,60,45,0.03)] flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Julien Moreau</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">open_in_new</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Growth Designer</span>
+<div class="flex items-center justify-between mt-2 pt-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">88 MATCH</span>
+<span class="font-label-sm text-label-sm text-outline">4d ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Interview -->
+<div class="w-72 shrink-0 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Interview</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">4</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(70,60,45,0.05),0_1px_3px_0_rgba(70,60,45,0.03)] flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">David Chen</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">open_in_new</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Principal Architect</span>
+<div class="flex items-center justify-between mt-2 pt-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">91 MATCH</span>
+<span class="font-label-sm text-label-sm text-outline">Round 3</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Offer -->
+<div class="w-72 shrink-0 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Offer</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">2</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(70,60,45,0.05),0_1px_3px_0_rgba(70,60,45,0.03)] flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sarah Lin</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">open_in_new</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Senior Product Designer</span>
+<div class="flex items-center justify-between mt-2 pt-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">96 MATCH</span>
+<span class="font-label-sm text-label-sm text-outline">Sent 24h ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Hired -->
+<div class="w-72 shrink-0 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Hired</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">3</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(70,60,45,0.05),0_1px_3px_0_rgba(70,60,45,0.03)] flex flex-col gap-space-xs opacity-75">
+<div class="flex items-start justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Kaelan Thorne</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Design Engineer</span>
+<div class="flex items-center justify-between mt-2 pt-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">ACCEPTED</span>
+<span class="font-label-sm text-label-sm text-outline">Starts May 1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Rejected -->
+<div class="w-72 shrink-0 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">Archived / Rejected</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">12</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">archive</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= BACKDROP SCRIM ================= -->
+<div class="fixed inset-0 top-16 left-64 bg-inverse-surface/35 backdrop-blur-[2px] z-40 transition-opacity duration-300" id="drawer-scrim"></div>
+<!-- ================= CANDIDATE DETAIL SIDE DRAWER ================= -->
+<aside class="fixed top-16 right-0 bottom-0 w-[570px] max-w-[90vw] z-50 flex flex-col bg-surface-container-low shadow-[0_20px_40px_-8px_rgba(70,60,45,0.22),0_6px_16px_-3px_rgba(70,60,45,0.1)] rounded-l-[36px] overflow-hidden transition-transform duration-300 transform translate-x-0" id="candidate-drawer" style="background-image: linear-gradient(165deg, rgba(255, 255, 255, 0.7) 0%, rgba(246, 243, 235, 0.95) 100%);">
+<!-- Tactile Specular Rim Highlight -->
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white to-white pointer-events-none opacity-90"></div>
+<!-- DRAWER HEADER (Pinned) -->
+<header class="p-space-lg pb-space-md border-b-0 flex flex-col gap-space-md shrink-0 bg-surface-container-low/60 backdrop-blur-md relative">
+<!-- Top Row: Stage pill selector & Close with ESC shortcut -->
+<div class="flex items-center justify-between">
+<!-- Interactive Stage Transition Dropdown Trigger -->
+<div class="relative group">
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-body-md-bold text-body-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_2px_6px_rgba(30,29,194,0.12)] hover:bg-primary-container hover:text-on-primary transition-all duration-150" id="stage-dropdown-btn" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="tracking-wide">Screening</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+</button>
+<!-- Quick Move Floating Menu -->
+<div class="hidden absolute left-0 mt-2 w-48 rounded-DEFAULT bg-surface-container-lowest p-space-xs shadow-[0_12px_28px_rgba(70,60,45,0.14),0_2px_6px_rgba(70,60,45,0.06)] z-30 flex-col gap-1" id="stage-menu">
+<span class="px-space-xs py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Move candidate to</span>
+<button class="w-full text-left px-space-xs py-1.5 rounded-DEFAULT text-body-sm font-body-sm hover:bg-surface-container text-on-surface flex items-center justify-between">
+<span>Applied</span>
+</button>
+<button class="w-full text-left px-space-xs py-1.5 rounded-DEFAULT text-body-sm font-body-md-bold bg-primary-fixed/40 text-primary flex items-center justify-between">
+<span>Screening</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="w-full text-left px-space-xs py-1.5 rounded-DEFAULT text-body-sm font-body-sm hover:bg-surface-container text-on-surface flex items-center justify-between">
+<span>Interview</span>
+</button>
+<button class="w-full text-left px-space-xs py-1.5 rounded-DEFAULT text-body-sm font-body-sm hover:bg-surface-container text-on-surface flex items-center justify-between">
+<span>Offer</span>
+</button>
+<button class="w-full text-left px-space-xs py-1.5 rounded-DEFAULT text-body-sm font-body-sm hover:bg-error-container text-error flex items-center justify-between">
+<span>Rejected</span>
+</button>
+</div>
+</div>
+<!-- ESC / Close Button -->
+<div class="flex items-center gap-space-xs">
+<span class="hidden sm:inline-block font-label-sm text-label-sm text-outline px-2 py-0.5 rounded-md bg-surface-container shadow-[inset_0_1px_2px_rgba(70,60,45,0.05)]">ESC</span>
+<button class="w-9 h-9 rounded-full flex items-center justify-center bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_1px_3px_rgba(70,60,45,0.05)]" id="close-drawer-btn" title="Close Drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Candidate Main Identity Stack -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Elena Rostova</h2>
+<!-- Role Badge -->
+<span class="px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wide">
+            Sr. Product Designer • Growth
+          </span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant pt-0.5">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+            APPLICATION FILED: APR 18, 2025 • 09:42 UTC
+          </span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+            SOURCED VIA REFERRAL
+          </span>
+</div>
+</div>
+</header>
+<!-- DRAWER SCROLLABLE BODY -->
+<div class="flex-1 overflow-y-auto px-space-lg py-space-md flex flex-col gap-space-lg scroll-smooth">
+<!-- SECTION 1: CANDIDATE METADATA & QUICK NOTE -->
+<section class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Candidate Contact &amp; Overview</span>
+<!-- Metadata Clay Tile Grid -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_2px_8px_rgba(70,60,45,0.04)] flex flex-col gap-space-sm">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Email Item -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Direct Email</span>
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-2 rounded-DEFAULT shadow-[inset_0_2px_4px_rgba(70,60,45,0.03)]">
+<span class="font-body-sm text-body-sm text-on-surface truncate pr-1">elena.rostova@designcraft.io</span>
+<button class="text-outline hover:text-primary transition-colors" title="Copy email" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Phone Item -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Phone</span>
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-2 rounded-DEFAULT shadow-[inset_0_2px_4px_rgba(70,60,45,0.03)]">
+<span class="font-body-sm text-body-sm text-on-surface">+1 (415) 892-4410</span>
+<span class="material-symbols-outlined text-outline text-[16px]">call</span>
+</div>
+</div>
+</div>
+<!-- Social / LinkedIn Anchor Link -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Public Profiles</span>
+<div class="flex items-center gap-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container-highest text-primary font-body-sm text-body-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_1px_3px_rgba(70,60,45,0.03)] transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span class="font-body-md-bold">linkedin.com/in/elenarostova</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container-highest text-on-surface-variant font-body-sm text-body-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_1px_3px_rgba(70,60,45,0.03)] transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>portfolio.elenarostova.me</span>
+</a>
+</div>
+</div>
+<!-- Editable Quick Notes Text Area -->
+<div class="flex flex-col gap-1 pt-1">
+<label class="flex items-center justify-between" for="evaluator-notes">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Lead Recruiter Notes</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Autosaved
+              </span>
+</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm p-space-sm rounded-[14px] shadow-[inset_0_2px_4px_rgba(70,60,45,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container resize-none placeholder:text-outline" id="evaluator-notes" placeholder="Enter quick interview or screening notes..." rows="3">Strong portfolio in B2B SaaS onboarding. Great culture fit, communicated clear product metrics from previous scale-up experience at Linear &amp; Amplitude.</textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: CURRICULUM VITAE -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Curriculum Vitae</span>
+<span class="font-label-sm text-label-sm text-outline">UPDATED APR 2025</span>
+</div>
+<!-- Tactile CV Artifact Pill / Card -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-lowest shadow-[0_4px_14px_-2px_rgba(70,60,45,0.06),0_1px_3px_0_rgba(70,60,45,0.04)] flex items-center justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<!-- PDF Icon Clay Stamp -->
+<div class="w-12 h-12 rounded-DEFAULT bg-error-container text-on-error-container flex flex-col items-center justify-center shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.7)]">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="font-label-sm text-[9px] uppercase font-bold tracking-tight mt-[-2px]">PDF</span>
+</div>
+<!-- Filename and Meta -->
+<div class="flex flex-col min-w-0">
+<span class="font-body-md-bold text-body-md-bold text-on-surface truncate" title="Elena_Rostova_Staff_Product_Designer_2025.pdf">
+                Elena_Rostova_Staff_Product_Designer_2025.pdf
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+                2.4 MB • Uploaded 2 days ago
+              </span>
+</div>
+</div>
+<!-- Document Action Controls -->
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] transition-all" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span class="font-body-md-bold">Preview</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm hover:bg-surface-container transition-all" type="button">
+              Replace
+            </button>
+</div>
+</div>
+</section>
+<!-- SECTION 3: AI SCREENING INSIGHTS -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">AI Screening Insights</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span class="font-label-sm text-label-sm uppercase">Re-assess with AI</span>
+</button>
+</div>
+<!-- AI Clay Slab Panel -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container shadow-[0_8px_24px_-4px_rgba(70,60,45,0.08),0_2px_6px_-1px_rgba(70,60,45,0.04)] flex flex-col gap-space-md relative overflow-hidden" style="background-image: linear-gradient(165deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 238, 230, 0.8) 100%);">
+<!-- Subtle Top Specular Inset -->
+<div class="absolute inset-x-0 top-0 h-[1px] bg-white opacity-90"></div>
+<!-- Score Banner -->
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-highest">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">82</span>
+<span class="font-body-lg text-body-lg text-outline">/ 100</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-space-xs">ROLE COMPATIBILITY</span>
+</div>
+<!-- Recommendation Badge -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed font-bold tracking-wider uppercase">ADVANCE CANDIDATE</span>
+</div>
+</div>
+<!-- Synthetic Executive Summary -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Exceptional alignment with systems design, user journeys, and cross-functional design engineering. Demonstrated capacity to lead enterprise growth experiments. Minor ramp-up needed in FinTech compliance protocols and regulated data pipelines.
+          </p>
+<!-- Diagnostic Strengths & Gaps Bento Tile -->
+<div class="grid grid-cols-1 gap-space-sm pt-space-xs">
+<!-- Strengths Column -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_1px_3px_rgba(70,60,45,0.03)] flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wide">Key Strengths</span>
+</div>
+<ul class="flex flex-col gap-1.5 pl-1">
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></span>
+<span><strong>8+ years leading design systems:</strong> Built and maintained scaled component libraries adopted by 60+ engineers.</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></span>
+<span><strong>Growth activation lift:</strong> Proven track record improving new user onboarding completion by 28% at previous startup.</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></span>
+<span><strong>Figma Token Architect:</strong> Deep expertise in multi-brand token workflows, variables, and automated handoffs.</span>
+</li>
+</ul>
+</div>
+<!-- Gaps / Considerations Column -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_1px_3px_rgba(70,60,45,0.03)] flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wide">Areas to Probe in Interview</span>
+</div>
+<ul class="flex flex-col gap-1.5 pl-1">
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline mt-2 shrink-0"></span>
+<span><strong>SOC-2 / Regulatory workflows:</strong> Limited direct exposure to strict compliance friction patterns in B2B banking.</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline mt-2 shrink-0"></span>
+<span><strong>Timezone coordination:</strong> Currently based in UTC+1; requires explicit 4-hour overlap agreement with San Francisco team.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Rubric Breakdown Miniature Progress Bars -->
+<div class="pt-space-xs flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Evaluation Rubric Matrix</span>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface">Product Strategy &amp; Craft</span>
+<span class="font-bold text-on-surface">92%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface">Communication &amp; Systems Thinking</span>
+<span class="font-bold text-on-surface">88%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface">FinTech Domain Familiarity</span>
+<span class="font-bold text-on-surface">54%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 54%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: RECENT ACTIVITY MINI LOG -->
+<section class="flex flex-col gap-space-sm pb-space-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pipeline Timeline</span>
+<div class="flex flex-col gap-space-sm pl-2">
+<!-- Item 1 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0 shadow-[0_0_0_3px_#e1e0ff]"></div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface"><strong>Sarah Jenkins</strong> moved Elena from <em>Applied</em> to <em>Screening</em></span>
+<span class="font-label-sm text-label-sm text-outline">Today at 10:15 AM</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-2 h-2 rounded-full bg-secondary mt-1.5 shrink-0 shadow-[0_0_0_3px_#dcf5dc]"></div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Automated AI Parser scored application packet (82/100)</span>
+<span class="font-label-sm text-label-sm text-outline">Apr 18 at 09:43 UTC</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- DRAWER FOOTER (Pinned with Tactile Shelf Depth) -->
+<footer class="p-space-md px-space-lg shrink-0 bg-surface-container-low/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(70,60,45,0.06),inset_0_1px_1px_rgba(255,255,255,0.85)] flex items-center justify-between gap-space-md z-10">
+<!-- Destructive Action -->
+<button class="flex items-center gap-1.5 px-space-sm py-2 rounded-full text-error hover:bg-error-container/60 transition-all font-body-md-bold text-body-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Delete candidate</span>
+</button>
+<!-- Primary / Secondary Confirmation Group -->
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-full text-on-surface hover:bg-surface-container-high transition-all font-body-md-bold text-body-sm" id="cancel-btn" type="button">
+          Cancel
+        </button>
+<button class="flex items-center gap-space-xs px-space-lg py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-body-md-bold text-body-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_4px_14px_rgba(59,63,216,0.25)] hover:shadow-lg transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Save changes</span>
+</button>
+</div>
+</footer>
+</aside>
+<!-- ================= INLINE SCRIPT FOR TACTILE INTERACTIONS ================= -->
+<script>
+    (function initCandidateDrawer() {
+      const drawer = document.getElementById('candidate-drawer');
+      const scrim = document.getElementById('drawer-scrim');
+      const closeBtn = document.getElementById('close-drawer-btn');
+      const cancelBtn = document.getElementById('cancel-btn');
+      const stageBtn = document.getElementById('stage-dropdown-btn');
+      const stageMenu = document.getElementById('stage-menu');
+
+      function hideDrawer() {
+        drawer.style.transform = 'translateX(100%)';
+        scrim.style.opacity = '0';
+        scrim.style.pointerEvents = 'none';
+        setTimeout(() => {
+          drawer.classList.add('hidden');
+        }, 300);
+      }
+
+      function showDrawer() {
+        drawer.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          drawer.style.transform = 'translateX(0)';
+          scrim.style.opacity = '1';
+          scrim.style.pointerEvents = 'auto';
+        });
+      }
+
+      closeBtn.addEventListener('click', hideDrawer);
+      cancelBtn.addEventListener('click', hideDrawer);
+      scrim.addEventListener('click', hideDrawer);
+
+      // Keyboard ESC shortcut
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !drawer.classList.contains('hidden')) {
+          hideDrawer();
+        }
+      });
+
+      // Quick stage dropdown toggle
+      stageBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        stageMenu.classList.toggle('hidden');
+        stageMenu.classList.toggle('flex');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!stageMenu.contains(e.target) && !stageBtn.contains(e.target)) {
+          stageMenu.classList.add('hidden');
+          stageMenu.classList.remove('flex');
+        }
+      });
+    })();
+  </script>
+</div></main></div></body></html>

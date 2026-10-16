@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&amp;family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-container":"#426e48","on-primary-container":"#c7c8ff","background":"#fcf9f1","inverse-on-surface":"#f3f1e9","primary":"#1e1dc2","outline":"#767587","outline-variant":"#c6c5d8","surface-container-high":"#ebe8e0","on-primary-fixed-variant":"#2829c8","on-secondary":"#ffffff","tertiary-container":"#5d4f7f","on-secondary-fixed-variant":"#24502d","on-secondary-fixed":"#002109","surface-dim":"#dcdad2","surface-container-low":"#f6f3eb","inverse-primary":"#c0c1ff","on-tertiary-container":"#d5c4fc","on-surface":"#1c1c17","surface":"#fcf9f1","on-primary":"#ffffff","on-tertiary-fixed":"#20133f","surface-container-lowest":"#ffffff","surface-bright":"#fcf9f1","on-error":"#ffffff","surface-tint":"#4448e0","secondary-fixed":"#bdefbf","inverse-surface":"#31312b","secondary":"#3c6842","surface-variant":"#e5e2da","primary-container":"#3b3fd8","on-error-container":"#93000a","surface-container-highest":"#e5e2da","tertiary-fixed":"#e9ddff","secondary-fixed-dim":"#a2d2a5","secondary-container":"#bdefbf","error":"#ba1a1a","error-container":"#ffdad6","primary-fixed-dim":"#c0c1ff","on-background":"#1c1c17","on-surface-variant":"#454555","tertiary":"#453866","on-tertiary-fixed-variant":"#4c3f6e","tertiary-fixed-dim":"#cfbef5","on-primary-fixed":"#03006d","primary-fixed":"#e1e0ff","on-tertiary":"#ffffff","surface-container":"#f1eee6"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin":"2.5rem","space-xs":"0.375rem","space-md":"1.25rem","gutter-mobile":"1rem","space-lg":"2rem","space-xl":"3rem","space-sm":"0.75rem","gutter":"1.5rem","margin-mobile":"1.25rem"},"fontFamily":{"body-md-bold":["Manrope"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Manrope"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Manrope"],"label-md":["JetBrains Mono"],"body-lg":["Manrope"]},"fontSize":{"body-md-bold":["14px",{"lineHeight":"22px","fontWeight":"600"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low flex flex-col justify-between py-margin px-gutter z-50 shadow-[0_8px_24px_-4px_rgba(70,60,45,0.08),0_2px_6px_-1px_rgba(70,60,45,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><div class="w-10 h-10 rounded-DEFAULT bg-primary flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_4px_14px_rgba(59,63,216,0.25)]"><span class="material-symbols-outlined text-on-primary text-[22px]">view_kanban</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Hireboard</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">ATS Platform</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-md-bold shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_4px_14px_rgba(59,63,216,0.25)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pipeline-board" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Pipeline / Board</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="jobs" href="#"><span class="material-symbols-outlined text-[20px]">work</span><span>Jobs</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="admin-accounts" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Admin / Accounts</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav></div><div class="pt-space-md border-t border-outline-variant/30 flex items-center justify-between px-space-xs"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-body-md-bold text-body-md shadow-[0_2px_6px_rgba(70,60,45,0.06)]">CV</div><div class="flex flex-col"><span class="font-body-md-bold text-body-md-bold text-on-surface leading-tight">Clara Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Talent Lead</span></div></div><button aria-label="Account Actions" class="p-space-xs rounded-full hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">more_vert</span></button></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-margin"><div class="h-16 w-full flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-full text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[18px]">domain</span><span class="font-body-md-bold text-body-md-bold text-on-surface">Acme Corp Talent</span><span class="font-label-sm text-label-sm bg-surface-container-high px-space-xs py-0.5 rounded-full text-on-surface-variant uppercase">HQ</span></div><div class="h-4 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><span class="font-body-sm text-body-sm">Workspace:</span><span class="font-body-md-bold text-body-md-bold text-on-surface">Engineering &amp; Product</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-64 pl-9 pr-space-md py-1.5 rounded-full bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search candidates, roles, tags..." type="search"/></div><button aria-label="Notifications" class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 min-h-screen bg-background"><div class="flex flex-col w-full pb-space-xl">
+<!-- Impersonation Notice & Context Bar -->
+<div class="px-margin pt-space-md">
+<div class="bg-primary text-on-primary rounded-DEFAULT p-space-sm sm:px-space-md flex flex-wrap items-center justify-between gap-space-sm shadow-[0_4px_16px_rgba(30,29,194,0.18)]">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" style="font-variation-settings: 'FILL' 1;">theater_comedy</span>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full uppercase tracking-wider">Impersonation Active</span>
+<span class="font-body-md text-body-md text-on-primary">Acting on behalf of <strong class="font-body-md-bold">Acme Corp</strong></span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim/80 ml-1 hidden md:inline">| Session ID: HB-8891-ACME</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative inline-block text-left" id="clientSelectorWrap">
+<button class="bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm px-space-sm py-1 rounded-full flex items-center gap-1 transition-colors shadow-sm" id="clientDropdownBtn" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Viewing:</span>
+<span class="font-body-md-bold text-body-md-bold" id="currentClientLabel">Acme Corp (Enterprise)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</button>
+<!-- Client Switcher Popover -->
+<div class="hidden absolute right-0 mt-2 w-64 rounded-DEFAULT bg-surface-container-lowest p-1.5 shadow-[0_12px_32px_rgba(70,60,45,0.15)] z-30" id="clientMenu">
+<div class="px-3 py-1.5 font-label-sm text-label-sm text-on-surface-variant uppercase border-b border-surface-variant">Select Tenant Context</div>
+<button class="w-full text-left px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container flex items-center justify-between" onclick="switchClient('Acme Corp (Enterprise)')" type="button">
+<span>Acme Corp (Enterprise)</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container flex items-center justify-between" onclick="switchClient('Linear Tech (Growth)')" type="button">
+<span>Linear Tech (Growth)</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container flex items-center justify-between" onclick="switchClient('Vercel Systems (Scale)')" type="button">
+<span>Vercel Systems (Scale)</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container flex items-center justify-between" onclick="switchClient('Stripe Global (Enterprise)')" type="button">
+<span>Stripe Global (Enterprise)</span>
+</button>
+<div class="my-1 border-t border-surface-variant"></div>
+<button class="w-full text-left px-3 py-2 rounded-lg font-body-sm text-body-sm text-primary hover:bg-surface-container flex items-center gap-2" onclick="switchClient('Default Global Admin')" type="button">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>Default Admin View</span>
+</button>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-on-primary-fixed-variant font-body-sm text-body-sm px-space-sm py-1 rounded-full flex items-center gap-1 transition-colors" onclick="alert('Exiting impersonation session. Reverting to Clara Vance (HQ).');" type="button">
+<span class="material-symbols-outlined text-[16px]">logout</span>
+<span class="hidden sm:inline">Exit View</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Page Header -->
+<div class="px-margin pt-space-lg pb-space-md flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2.5 py-0.5 rounded-full uppercase tracking-wider">Tenant IAM &amp; Governance</span>
+<span class="font-label-sm text-label-sm text-outline">v2.4.0-core</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">Account Management &amp; Access</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-2xl">
+        Manage customer tenant accounts, assign operational roles, trigger secure impersonation sessions, and provision credentialed seats.
+      </p>
+</div>
+<!-- Quick Stats Metric Strip -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-1.5 rounded-full shadow-[inset_0_1px_2px_rgba(70,60,45,0.05)]">
+<div class="bg-surface-container-lowest px-4 py-1.5 rounded-full shadow-sm flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ACTIVE SEATS</span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">38</span>
+</div>
+<div class="px-3 py-1.5 flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">INVITED</span>
+<span class="font-body-md-bold text-body-md-bold text-tertiary">4</span>
+</div>
+<div class="px-3 py-1.5 flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">TOTAL TENANTS</span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">12</span>
+</div>
+</div>
+</div>
+<!-- Main Content Mosaic Layout: Directory Table (Left) + Create Form (Right) -->
+<div class="px-margin grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- LEFT: Account Directory (8 Cols) -->
+<section class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Filter / Control Clay Slab -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_8px_24px_-4px_rgba(70,60,45,0.06),0_2px_6px_-1px_rgba(70,60,45,0.03)] flex flex-col lg:flex-row gap-space-sm lg:items-center lg:justify-between">
+<!-- Search input -->
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-space-md py-2 rounded-full bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 transition-all shadow-[inset_0_1px_2px_rgba(70,60,45,0.04)]" id="accountSearchInput" placeholder="Search by name, email, or tenant..." type="search"/>
+</div>
+<!-- Filter Selects -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Role Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm px-3.5 py-2 pr-8 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer shadow-[inset_0_1px_2px_rgba(70,60,45,0.04)]" id="roleFilterSelect">
+<option value="ALL">All Roles</option>
+<option value="Admin">Admin Only</option>
+<option value="Customer">Customer Only</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Status Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm px-3.5 py-2 pr-8 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer shadow-[inset_0_1px_2px_rgba(70,60,45,0.04)]" id="statusFilterSelect">
+<option value="ALL">All Statuses</option>
+<option value="Active">Active</option>
+<option value="Invited">Invited</option>
+<option value="Suspended">Suspended</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Export / Batch Action Button -->
+<button class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" title="Export CSV" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Account Table Canvas -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-[0_8px_24px_-4px_rgba(70,60,45,0.08),0_2px_6px_-1px_rgba(70,60,45,0.04)]">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm pl-space-md pr-space-xs font-semibold" scope="col">User / Identity</th>
+<th class="py-space-sm px-space-xs font-semibold" scope="col">Tenant Organization</th>
+<th class="py-space-sm px-space-xs font-semibold hidden md:table-cell" scope="col">Email Address</th>
+<th class="py-space-sm px-space-xs font-semibold" scope="col">Role &amp; Access</th>
+<th class="py-space-sm px-space-xs font-semibold hidden lg:table-cell" scope="col">Provisioned</th>
+<th class="py-space-sm pr-space-md pl-space-xs text-right font-semibold" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm" id="accountTableBody">
+<!-- Row 1: Clara Vance (Hireboard Admin) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+                      CV
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">Clara Vance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Primary Superadmin</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Hireboard Internal</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  clara@hireboard.internal
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-primary-container text-on-primary shadow-xs">
+                    Admin
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Oct 12, 2024
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-full text-on-surface-variant/40 hover:text-on-surface-variant cursor-not-allowed" onclick="alert('Cannot impersonate root superadmin account.')" title="Superadmin" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Account settings" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Marcus Sterling (Acme Corp Admin) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-secondary font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+                      MS
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">Marcus Sterling</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">VP Engineering Talent</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Acme Corp</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  m.sterling@acme.com
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-primary-container text-on-primary shadow-xs">
+                    Admin
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Nov 04, 2024
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors" onclick="quickImpersonate('Marcus Sterling', 'Acme Corp')" type="button">
+<span class="material-symbols-outlined text-[14px]">login</span>
+<span>Impersonate</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Sarah Jenkins (Acme Corp Customer) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+                      SJ
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">Sarah Jenkins</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Senior Tech Recruiter</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Acme Corp</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  sjenkins@acme.com
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-secondary-container text-on-secondary-container shadow-xs">
+                    Customer
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Dec 19, 2024
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors" onclick="quickImpersonate('Sarah Jenkins', 'Acme Corp')" type="button">
+<span class="material-symbols-outlined text-[14px]">login</span>
+<span>Impersonate</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Liam Chen (Linear Tech Admin) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-tertiary font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+                      LC
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">Liam Chen</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lead Product Org</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Linear Tech</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  lchen@linear.app
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-primary-container text-on-primary shadow-xs">
+                    Admin
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Jan 08, 2025
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors" onclick="quickImpersonate('Liam Chen', 'Linear Tech')" type="button">
+<span class="material-symbols-outlined text-[14px]">login</span>
+<span>Impersonate</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Elena Rostova (Vercel Customer) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface-variant font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+                      ER
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">Elena Rostova</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Design Hiring Partner</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Vercel Systems</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  elena@vercel.com
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-secondary-container text-on-secondary-container shadow-xs">
+                    Customer
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Jan 18, 2025
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors" onclick="quickImpersonate('Elena Rostova', 'Vercel Systems')" type="button">
+<span class="material-symbols-outlined text-[14px]">login</span>
+<span>Impersonate</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: David Kim (Retool Customer - Invited state) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-variant text-on-surface-variant font-body-md-bold text-body-md flex items-center justify-center opacity-80">
+                      DK
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">David Kim</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Invite Pending
+                      </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Retool Inc</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  david.k@retool.com
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-secondary-container text-on-secondary-container shadow-xs">
+                    Customer
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Feb 01, 2025
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors" onclick="alert('Resent invite email to david.k@retool.com')" type="button">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>Resend</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Rachel Green (Figma Admin) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+                      RG
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">Rachel Green</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Head of Talent Ops</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Figma</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  rachel.g@figma.com
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-primary-container text-on-primary shadow-xs">
+                    Admin
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Feb 10, 2025
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors" onclick="quickImpersonate('Rachel Green', 'Figma')" type="button">
+<span class="material-symbols-outlined text-[14px]">login</span>
+<span>Impersonate</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Mateo Silva (Stripe Customer) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-secondary font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+                      MS
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">Mateo Silva</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Staff Hiring Manager</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">Stripe Global</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+                  mateo.silva@stripe.com
+                </td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-secondary-container text-on-secondary-container shadow-xs">
+                    Customer
+                  </span>
+</td>
+<td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+                  Feb 14, 2025
+                </td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors" onclick="quickImpersonate('Mateo Silva', 'Stripe Global')" type="button">
+<span class="material-symbols-outlined text-[14px]">login</span>
+<span>Impersonate</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Summary Bar -->
+<div class="bg-surface-container-low/60 px-space-md py-space-sm flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm">SHOWING</span>
+<span class="font-body-md-bold text-body-md-bold text-on-surface">8</span>
+<span class="font-label-sm text-label-sm">OF 42 REGISTERED ACCOUNTS</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-full text-outline-variant cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-2.5 py-1 rounded-full text-on-surface font-semibold shadow-xs">1</span>
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded-full hover:bg-surface-container-high transition-colors" type="button">2</button>
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded-full hover:bg-surface-container-high transition-colors" type="button">3</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container-high text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security / Audit Callout Card -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md shadow-[0_2px_8px_rgba(70,60,45,0.04)]">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<div>
+<div class="font-body-md-bold text-body-md-bold text-on-surface">SOC2 Type II Audit Logging Enabled</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">All session impersonations, role elevations, and token requests are hashed into the immutable tenant ledger.</div>
+</div>
+</div>
+<button class="whitespace-nowrap font-body-sm text-body-sm font-semibold text-primary hover:text-on-primary-fixed-variant px-3 py-1.5 rounded-full hover:bg-surface-container transition-colors" type="button">
+          View Audit Log →
+        </button>
+</div>
+</section>
+<!-- RIGHT: Create Account Form Panel (4 Cols) -->
+<section class="xl:col-span-4">
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-[0_8px_24px_-4px_rgba(70,60,45,0.08),0_2px_6px_-1px_rgba(70,60,45,0.04)] sticky top-20">
+<!-- Header -->
+<div class="flex items-start justify-between pb-space-sm mb-space-md border-b border-surface-variant/60">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Create account</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Provision a new administrator or customer seat.
+            </p>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[22px]">person_add</span>
+</div>
+<!-- Form Body -->
+<form class="flex flex-col gap-space-md" id="createAccountForm" onsubmit="handleAccountCreation(event)">
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold" for="fullName">
+              Full Name <span class="text-error">*</span>
+</label>
+<input class="w-full px-space-sm py-2 rounded-[14px] bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 shadow-[inset_0_2px_4px_rgba(70,60,45,0.04)] transition-all" id="fullName" name="fullName" placeholder="e.g. Eleanor Vance" required="" type="text"/>
+</div>
+<!-- Work Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold" for="workEmail">
+              Work Email <span class="text-error">*</span>
+</label>
+<input class="w-full px-space-sm py-2 rounded-[14px] bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 shadow-[inset_0_2px_4px_rgba(70,60,45,0.04)] transition-all" id="workEmail" name="workEmail" placeholder="e.g. user@acme.com" required="" type="email"/>
+</div>
+<!-- Company / Tenant -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold" for="companySelect">
+              Company Tenant <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none px-space-sm py-2 rounded-[14px] bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 shadow-[inset_0_2px_4px_rgba(70,60,45,0.04)] transition-all cursor-pointer" id="companySelect" name="company">
+<option selected="" value="Acme Corp">Acme Corp (Active Impersonation)</option>
+<option value="Hireboard Internal">Hireboard Internal HQ</option>
+<option value="Linear Tech">Linear Tech</option>
+<option value="Vercel Systems">Vercel Systems</option>
+<option value="Retool Inc">Retool Inc</option>
+<option value="Figma">Figma</option>
+<option value="Stripe Global">Stripe Global</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Temporary Password with Generator -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold" for="tempPassword">
+                Temporary Password
+              </label>
+<button class="font-label-sm text-label-sm text-primary hover:text-on-primary-fixed-variant flex items-center gap-1 transition-colors" onclick="generateRandomPassword()" type="button">
+<span class="material-symbols-outlined text-[14px]">autorenew</span>
+<span>Auto-Generate</span>
+</button>
+</div>
+<div class="relative">
+<input class="w-full pl-space-sm pr-10 py-2 rounded-[14px] bg-surface-container-low font-label-md text-label-md text-on-surface tracking-wider focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 shadow-[inset_0_2px_4px_rgba(70,60,45,0.04)] transition-all" id="tempPassword" name="tempPassword" type="password" value="Hb•98$mQ#2xL"/>
+<button class="absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface p-1 transition-colors" id="togglePassVisibility" onclick="togglePasswordVisibility()" title="Toggle password reveal" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Role Selector: Segmented Radio Cards -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Role &amp; Permissions Level
+            </label>
+<div class="grid grid-cols-2 gap-space-xs p-1 bg-surface-container-low rounded-DEFAULT">
+<!-- Customer Option -->
+<label class="cursor-pointer flex flex-col p-2.5 rounded-[12px] bg-surface-container-lowest text-on-surface shadow-xs transition-all relative" id="roleCustomerLabel">
+<div class="flex items-center justify-between">
+<span class="font-body-md-bold text-body-md-bold">Customer</span>
+<input checked="" class="accent-primary" name="accountRole" onchange="updateRoleStyling()" type="radio" value="Customer"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-1">Standard hiring pipeline &amp; candidate access</span>
+</label>
+<!-- Admin Option -->
+<label class="cursor-pointer flex flex-col p-2.5 rounded-[12px] hover:bg-surface-container-lowest/70 text-on-surface transition-all relative" id="roleAdminLabel">
+<div class="flex items-center justify-between">
+<span class="font-body-md-bold text-body-md-bold">Admin</span>
+<input class="accent-primary" name="accountRole" onchange="updateRoleStyling()" type="radio" value="Admin"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-1">Full workspace config, billing &amp; user controls</span>
+</label>
+</div>
+</div>
+<!-- Send Welcome Email Checkbox -->
+<div class="pt-1">
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary/20 rounded-[4px] accent-primary cursor-pointer" id="sendInviteCheckbox" name="sendInvite" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-snug">
+                Send welcome invitation email with temporary credentials and onboarding instructions.
+              </span>
+</label>
+</div>
+<!-- Form Submit Action -->
+<div class="pt-2">
+<button class="w-full bg-primary-container text-on-primary hover:bg-primary font-body-md-bold text-body-md-bold py-3 px-space-md rounded-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_4px_14px_rgba(59,63,216,0.25)] flex items-center justify-center gap-2 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer" type="submit">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Create account</span>
+</button>
+</div>
+<!-- Notification feedback banner (hidden initially) -->
+<div class="hidden p- space-sm bg-secondary-fixed text-on-secondary-fixed rounded-DEFAULT flex items-center gap-2 text-body-sm" id="formSuccessAlert">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span id="formSuccessText">Account created and invitation sent!</span>
+</div>
+</form>
+</div>
+</section>
+</div>
+<!-- Inline Script for Interactivity -->
+<script>
+    // Client impersonation switcher menu dropdown
+    const clientBtn = document.getElementById('clientDropdownBtn');
+    const clientMenu = document.getElementById('clientMenu');
+    const currentClientLabel = document.getElementById('currentClientLabel');
+
+    if (clientBtn && clientMenu) {
+      clientBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        clientMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        if (!clientMenu.classList.contains('hidden')) {
+          clientMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    function switchClient(clientName) {
+      if (currentClientLabel) {
+        currentClientLabel.innerText = clientName;
+      }
+      if (clientMenu) clientMenu.classList.add('hidden');
+      alert(`Switched impersonation context to: ${clientName}`);
+    }
+
+    function quickImpersonate(userName, company) {
+      alert(`Launching elevated impersonation session for ${userName} (${company}). Audit log event generated.`);
+    }
+
+    // Password Reveal & Generator
+    function togglePasswordVisibility() {
+      const passInput = document.getElementById('tempPassword');
+      const eyeIcon = document.getElementById('eyeIcon');
+      if (!passInput) return;
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        if (eyeIcon) eyeIcon.textContent = 'visibility_off';
+      } else {
+        passInput.type = 'password';
+        if (eyeIcon) eyeIcon.textContent = 'visibility';
+      }
+    }
+
+    function generateRandomPassword() {
+      const passInput = document.getElementById('tempPassword');
+      const charset = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*";
+      let res = "HB-";
+      for (let i = 0; i < 9; i++) {
+        res += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      if (passInput) {
+        passInput.value = res;
+        passInput.type = 'text';
+        const eyeIcon = document.getElementById('eyeIcon');
+        if (eyeIcon) eyeIcon.textContent = 'visibility_off';
+      }
+    }
+
+    // Role segmented control styling
+    function updateRoleStyling() {
+      const isCustomer = document.querySelector('input[name="accountRole"]:checked')?.value === 'Customer';
+      const custLabel = document.getElementById('roleCustomerLabel');
+      const admLabel = document.getElementById('roleAdminLabel');
+
+      if (isCustomer) {
+        custLabel?.classList.add('bg-surface-container-lowest', 'shadow-xs');
+        admLabel?.classList.remove('bg-surface-container-lowest', 'shadow-xs');
+      } else {
+        admLabel?.classList.add('bg-surface-container-lowest', 'shadow-xs');
+        custLabel?.classList.remove('bg-surface-container-lowest', 'shadow-xs');
+      }
+    }
+
+    // Account creation submission handler
+    function handleAccountCreation(e) {
+      e.preventDefault();
+      const name = document.getElementById('fullName').value;
+      const email = document.getElementById('workEmail').value;
+      const company = document.getElementById('companySelect').value;
+      const role = document.querySelector('input[name="accountRole"]:checked').value;
+      
+      const tableBody = document.getElementById('accountTableBody');
+      const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'HB';
+      const roleBadge = role === 'Admin'
+        ? `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-primary-container text-on-primary shadow-xs">Admin</span>`
+        : `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase bg-secondary-container text-on-secondary-container shadow-xs">Customer</span>`;
+
+      // Prepend to directory table
+      const newRow = document.createElement('tr');
+      newRow.className = "hover:bg-surface-container-low/70 transition-colors group bg-primary-fixed/20";
+      newRow.innerHTML = `
+        <td class="py-space-sm pl-space-md pr-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-9 h-9 rounded-full bg-primary-container text-on-primary font-body-md-bold text-body-md flex items-center justify-center shadow-sm">
+              ${initials}
+            </div>
+            <div class="flex flex-col">
+              <span class="font-body-md-bold text-body-md-bold text-on-surface group-hover:text-primary transition-colors">${name}</span>
+              <span class="font-label-sm text-label-sm text-secondary">Just Added</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-space-sm px-space-xs">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-body-md-bold text-body-md-bold text-on-surface">${company}</span>
+          </div>
+        </td>
+        <td class="py-space-sm px-space-xs text-on-surface-variant font-label-md text-label-md hidden md:table-cell">
+          ${email}
+        </td>
+        <td class="py-space-sm px-space-xs">
+          ${roleBadge}
+        </td>
+        <td class="py-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm hidden lg:table-cell">
+          Today
+        </td>
+        <td class="py-space-sm pr-space-md pl-space-xs text-right">
+          <div class="flex items-center justify-end gap-1">
+            <button type="button" onclick="quickImpersonate('${name}', '${company}')" class="inline-flex items-center gap-1 bg-surface-container-low hover:bg-primary-fixed hover:text-on-primary-fixed text-on-surface-variant px-2.5 py-1 rounded-full font-body-sm text-body-sm transition-colors">
+              <span class="material-symbols-outlined text-[14px]">login</span>
+              <span>Impersonate</span>
+            </button>
+            <button type="button" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+              <span class="material-symbols-outlined text-[18px]">more_vert</span>
+            </button>
+          </div>
+        </td>
+      `;
+
+      if (tableBody) {
+        tableBody.insertBefore(newRow, tableBody.firstChild);
+      }
+
+      // Success feedback
+      const alertBox = document.getElementById('formSuccessAlert');
+      const alertText = document.getElementById('formSuccessText');
+      if (alertBox && alertText) {
+        alertText.innerText = `Created seat for ${name} (${company}). Credentials dispatched!`;
+        alertBox.classList.remove('hidden');
+        setTimeout(() => alertBox.classList.add('hidden'), 5000);
+      }
+
+      document.getElementById('fullName').value = '';
+      document.getElementById('workEmail').value = '';
+      generateRandomPassword();
+    }
+
+    // Search & Filter Client Behavior
+    const searchInput = document.getElementById('accountSearchInput');
+    const roleFilter = document.getElementById('roleFilterSelect');
+
+    function filterTable() {
+      const q = (searchInput?.value || '').toLowerCase();
+      const r = roleFilter?.value || 'ALL';
+      const rows = document.querySelectorAll('#accountTableBody tr');
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const matchesQuery = !q || text.includes(q);
+        const matchesRole = (r === 'ALL') || text.includes(r.toLowerCase());
+
+        if (matchesQuery && matchesRole) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    if (searchInput) searchInput.addEventListener('input', filterTable);
+    if (roleFilter) roleFilter.addEventListener('change', filterTable);
+  </script>
+</div></main></div></body></html>
